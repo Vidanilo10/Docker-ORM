@@ -3,7 +3,7 @@ from django.contrib.auth.models import PermissionsMixin, BaseUserManager, Abstra
 
 class UserProfileManager(BaseUserManager):
 
-    def create_user(self, email, name: str, password):
+    def create_user(self, email, name, password):
         if not email:
             raise ValueError('The user needs a email.')
 
